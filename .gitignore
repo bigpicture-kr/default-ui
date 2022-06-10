@@ -9,6 +9,7 @@ build
 !.yarn/sdks
 !.yarn/versions
 
+.template
 
 /**/index.js
 /**/index.js.map
