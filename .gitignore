@@ -1,0 +1,16 @@
+node_modules
+dist
+build
+!.yarn/cache
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+.yarn/*
+
+
+/**/index.js
+/**/index.js.map
+/**/index.d.ts
+

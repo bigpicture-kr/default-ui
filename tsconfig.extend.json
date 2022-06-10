@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./src",
+    "paths": {
+      "~": ["."],
+      "@app": ["./App.tsx"],
+      "@components/*": ["./components/*"],
+      "@styles/*": ["./styles/*"],
+      "@ico/*": ["./assets/images/ico/*"],
+      "@svgs/*": ["./assets/svgs/*"],
+      "@images/*": ["./assets/images/*"],
+      "@utils/*": ["./utils/*"]
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "name": "npm-publish-test-counter",
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "build": "yarn workspaces foreach --topological-dev run build"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "devDependencies": {
+    "@types/jest": "^26.0.20",
+    "typescript": "^4.3.5"
+  },
+  "packageManager": "yarn@3.1.1"
+}
