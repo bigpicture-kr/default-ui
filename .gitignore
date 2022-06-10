@@ -1,13 +1,13 @@
 node_modules
 dist
 build
-!.yarn/cache
+.yarn/*
+
 !.yarn/patches
 !.yarn/plugins
 !.yarn/releases
 !.yarn/sdks
 !.yarn/versions
-.yarn/*
 
 
 /**/index.js
