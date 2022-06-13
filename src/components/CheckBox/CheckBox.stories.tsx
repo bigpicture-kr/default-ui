@@ -1,5 +1,5 @@
-import { ComponentMeta, ComponentStory } from "@storybook/react";
 import React from "react";
+import { ComponentMeta, ComponentStory } from "@storybook/react";
 import CheckBox from "./CheckBox";
 
 export default {
@@ -11,18 +11,18 @@ export default {
       description: "label 정해줘요",
       type: {
         name: "string",
-        required: true,
-      },
-    },
-  },
+        required: true
+      }
+    }
+  }
 } as ComponentMeta<typeof CheckBox>;
 
-const Template: ComponentStory<typeof CheckBox> = (args) => (
+const Template: ComponentStory<typeof CheckBox> = args => (
   <CheckBox {...args} />
 );
 
 export const Default = Template.bind({});
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
 Default.args = {
-  label: "checkbox",
+  label: "checkbox"
 };
