@@ -24,6 +24,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "storybook": "start-storybook -s ./public -p 6006",
+    "storybook:prod": "start-storybook -s ./public -p 80",
     "build-storybook": "build-storybook"
   },
   "repository": {
