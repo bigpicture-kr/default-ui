@@ -17,7 +17,7 @@
   "types": "./build/types/index.d.ts",
   "scripts": {
     "build": "tsc --emitDeclarationOnly & rollup -c",
-    "build:example": "tsc --outDir ./examples/react/src/lib",
+    "build:example": "tsc --emitDeclarationOnly & rollup -c && cp -r ./build ./examples/react/src/lib",
     "start": "npm run exam & npm run watch",
     "build:types": "tsc --emitDeclarationOnly",
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -40,6 +40,7 @@
   "homepage": "https://github.com/bigpicture-kr/default-ui",
   "devDependencies": {
     "@babel/core": "^7.14.2",
+    "@rollup/plugin-alias": "^3.1.9",
     "@rollup/plugin-babel": "^5.3.0",
     "@rollup/plugin-commonjs": "^18.0.0",
     "@rollup/plugin-image": "^2.0.6",
@@ -79,5 +80,6 @@
     "react": ">=16.8",
     "react-dom": ">=16.8",
     "react-router-dom": ">=5.2.0"
-  }
+  },
+  "dependencies": {}
 }

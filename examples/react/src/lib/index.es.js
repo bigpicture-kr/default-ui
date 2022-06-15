@@ -1,21 +1,13 @@
-'use strict';
-
-Object.defineProperty(exports, '__esModule', { value: true });
-
-var React = require('react');
-
-function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
-
-var React__default = /*#__PURE__*/_interopDefaultLegacy(React);
+import React from 'react';
 
 var Button = function (_a) {
     var label = _a.label;
-    return React__default["default"].createElement("div", null, label);
+    return React.createElement("div", null, label);
 };
 
 var CheckBox = function (_a) {
     var label = _a.label;
-    return React__default["default"].createElement("div", null, label);
+    return React.createElement("div", null, label);
 };
 
 // Desktop
@@ -39,7 +31,5 @@ var useResponsive = function (rootFontSize, criteria) {
     }
 };
 
-exports.Button = Button;
-exports.CheckBox = CheckBox;
-exports.useResponsive = useResponsive;
-//# sourceMappingURL=index.js.map
+export { Button, CheckBox, useResponsive };
+//# sourceMappingURL=index.es.js.map

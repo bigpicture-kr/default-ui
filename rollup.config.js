@@ -3,6 +3,7 @@ import resolve from "@rollup/plugin-node-resolve";
 import image from "@rollup/plugin-image";
 import commonjs from "@rollup/plugin-commonjs";
 import babel from "@rollup/plugin-babel";
+import alias from "@rollup/plugin-alias";
 import typescript from "rollup-plugin-typescript2";
 
 const packageJson = require("./package.json");
@@ -38,7 +39,10 @@ export default {
       include: /node_modules/
     }),
     typescript({ useTsconfigDeclarationDir: true }),
-    image()
+    image(),
+    alias({
+      entries: [{ find: "@root", replacement: "./src" }]
+    })
   ],
   external
 };
