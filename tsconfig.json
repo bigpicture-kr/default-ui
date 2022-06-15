@@ -19,15 +19,9 @@
     "jsx": "react",
     "baseUrl": "./src",
     "paths": {
-      "~/*": ["./*"],
-      "@components/*": ["./components/*"]
+      "@root/*": ["./*"]
     }
   },
   "include": ["src", "index.tsx", "node_modules/*"],
-  "exclude": [
-    "node_modules",
-    "build",
-    "src/**/*.stories.tsx",
-    "src/**/*.test.tsx"
-  ]
+  "exclude": ["node_modules", "build"]
 }

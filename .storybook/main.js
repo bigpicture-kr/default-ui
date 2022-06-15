@@ -13,7 +13,7 @@ module.exports = {
   },
   // pathalias
   webpackFinal: async config => {
-    config.resolve.alias["~"] = path.resolve(__dirname, "../src");
+    config.resolve.alias["@root"] = path.resolve(__dirname, "../src");
     return config;
   }
 };

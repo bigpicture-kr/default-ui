@@ -1,6 +1,6 @@
 {
-  "name": "default-ui",
-  "version": "0.0.2",
+  "name": "default-uii",
+  "version": "0.0.4",
   "description": "UI Components Library for React.js",
   "keywords": [
     "react",
@@ -17,6 +17,7 @@
   "types": "./build/types/index.d.ts",
   "scripts": {
     "build": "tsc --emitDeclarationOnly & rollup -c",
+    "build:example": "tsc --outDir ./examples/react/src/lib",
     "start": "npm run exam & npm run watch",
     "build:types": "tsc --emitDeclarationOnly",
     "test": "echo \"Error: no test specified\" && exit 1",
