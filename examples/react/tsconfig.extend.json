@@ -3,7 +3,7 @@
     "baseUrl": "./src",
     "paths": {
       "@app": ["./App.tsx"],
-      "@lib": ["./lib"],
+      "@lib": ["./lib/types"],
       "@pages/*": ["./pages/*"],
       "@components/*": ["./components/*"],
       "@styles/*": ["./assets/styles/*"],

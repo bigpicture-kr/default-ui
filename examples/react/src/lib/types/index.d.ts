@@ -1,2 +1,2 @@
-export { Button, CheckBox } from "@root/components";
-export { useResponsive } from "@root/hooks";
+export { Button, CheckBox } from "./components";
+export { useResponsive } from "./hooks";

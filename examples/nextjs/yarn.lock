@@ -433,6 +433,11 @@ deep-is@^0.1.3:
   resolved "https://registry.yarnpkg.com/deep-is/-/deep-is-0.1.4.tgz#a6f2dce612fadd2ef1f519b73551f17e85199831"
   integrity sha512-oIPzksmTg4/MriiaYGO+okXDT7ztn/w3Eptv/+gSIdMdKsJo0u4CfYNFJPy+4SKMuCqGw2wxnA+URMg3t8a/bQ==
 
+default-uii@^0.0.11:
+  version "0.0.11"
+  resolved "https://registry.yarnpkg.com/default-uii/-/default-uii-0.0.11.tgz#43f6feac7416af08313f323e36282ee2add316ad"
+  integrity sha512-WQdcxvGTbWI4dlIA6lwMPzGkXJZfQ6qm5BvC+2Ah6O8HUeYAMxXUkhUho0O8W8y+QUr5L8TjK1qluzUBqSNNvA==
+
 define-properties@^1.1.3, define-properties@^1.1.4:
   version "1.1.4"
   resolved "https://registry.yarnpkg.com/define-properties/-/define-properties-1.1.4.tgz#0b14d7bd7fbeb2f3572c3a7eda80ea5d57fb05b1"
