@@ -1,4 +1,4 @@
-import { Button, useResponsive } from "default-uii";
+import { Button, useResponsive } from "./lib";
 import { Home } from "./screens";
 function App() {
   useResponsive();
