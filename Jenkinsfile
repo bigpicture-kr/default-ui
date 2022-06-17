@@ -2,6 +2,22 @@ pipeline {
     agent any
 
     stages {
+        stage('BUILD FOR NPM') {
+            steps {
+                sh '''
+                npm install
+                npm build
+                '''
+            }
+        }
+        stage('NPM PUBLISH') {
+            steps {
+                sh '''
+                    echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" >> ~/.npmrc
+                    npm publish
+                '''
+            }
+        }
         stage('BUILD IMAGE') {
             steps {
                 sh '''
