@@ -1,27 +1,11 @@
 pipeline {
     agent any
     stages {
-        stage('BUILD FOR NPM') {
-            steps {
-                sh '''
-                npm install
-                npm build
-                '''
-            }
-        }
-        stage('NPM PUBLISH') {
-            steps {
-                sh '''
-                    echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" >> ~/.npmrc
-                    npm publish
-                '''
-            }
-        }
         stage('BUILD IMAGE') {
             steps {
                 sh '''
                 # 이미지 새로 빌드
-                docker build -t default-ui-image .
+                docker build --build-arg NPM_TOKEN=${NPM_TOKEN} -t default-ui-image .
                 '''
             }
         }
