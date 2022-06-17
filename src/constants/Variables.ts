@@ -12,3 +12,5 @@ export const XD_TABLET_WIDTH = 768;
 export const XD_MOBILE_WIDTH = 384;
 
 export const ROOT_FONT_SIZE = 10;
+
+export const BOLD_WEIGHT = 700;
