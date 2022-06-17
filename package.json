@@ -1,6 +1,6 @@
 {
-  "name": "default-uii",
-  "version": "0.0.13",
+  "name": "default-ui",
+  "version": "0.0.2",
   "description": "UI Components Library for React.js",
   "keywords": [
     "react",
