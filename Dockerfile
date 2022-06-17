@@ -2,9 +2,11 @@ FROM node:14 as build-stage
 
 WORKDIR /app
 ADD . .
-RUN npm install
-RUN npm build           
-RUN npm run build-storybook
+
+RUN npm install -g yarn
+RUN yarn install
+RUN yarn build           
+RUN yarn build-storybook
 
 ARG NPM_TOKEN
 
