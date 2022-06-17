@@ -11,6 +11,8 @@ module.exports = {
   core: {
     builder: "@storybook/builder-webpack5"
   },
+  typescript: { reactDocgen: false },
+
   // pathalias
   webpackFinal: async config => {
     config.resolve.alias["@root"] = path.resolve(__dirname, "../src");
