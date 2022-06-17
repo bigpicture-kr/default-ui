@@ -3,7 +3,6 @@ FROM node:14 as build-stage
 WORKDIR /app
 ADD . .
 
-RUN npm install -g yarn
 RUN yarn install
 RUN yarn build           
 RUN yarn build-storybook
