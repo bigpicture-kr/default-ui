@@ -1,13 +1,9 @@
 pipeline {
     agent any
-    tools {
-        nodejs "node16"
-    }
     stages {
         stage('BUILD FOR NPM') {
             steps {
                 sh '''
-                
                 npm install
                 npm build
                 '''
