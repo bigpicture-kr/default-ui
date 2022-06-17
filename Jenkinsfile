@@ -7,6 +7,7 @@ pipeline {
         stage('BUILD FOR NPM') {
             steps {
                 sh '''
+                
                 npm install
                 npm build
                 '''
