@@ -18,13 +18,14 @@ const useResponsive = (
 
       const currentWidth = document.body.clientWidth;
 
+      document.documentElement.style.willChange = "font-size";
+      document.documentElement.style.height = "100%";
+
       if (currentWidth < (criteria?.break || XD_TABLET_WIDTH)) {
         document.documentElement.style.fontSize = vwMobile(
           rootFontSize || ROOT_FONT_SIZE
         );
       } else {
-        document.documentElement.style.willChange = "font-size";
-        document.documentElement.style.height = "100%";
         document.documentElement.style.fontSize = vw(
           rootFontSize || ROOT_FONT_SIZE
         );
