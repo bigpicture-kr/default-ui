@@ -1,14 +1,23 @@
 import { vw, vwMobile } from "@root/constants/Size";
-import { ROOT_FONT_SIZE, XD_TABLET_WIDTH } from "@root/constants/Variables";
+import {
+  DEFAULT_ROOT_FONT_SIZE,
+  DEFAULT_DESKTOP_HEIGHT,
+  DEFAULT_MOBILE_WIDTH,
+  DEFAULT_TABLET_WIDTH
+} from "@root/constants/Variables";
 import { debounce } from "lodash";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 
 const useResponsive = (
-  rootFontSize?: number,
-  criteria?: {
+  rootFontSize: number = DEFAULT_ROOT_FONT_SIZE,
+  criteria: {
     pc: number;
     break: number;
-    mo: number;
+    mobile: number;
+  } = {
+    pc: DEFAULT_DESKTOP_HEIGHT,
+    break: DEFAULT_TABLET_WIDTH,
+    mobile: DEFAULT_MOBILE_WIDTH
   }
 ) => {
   useEffect(() => {
@@ -18,20 +27,26 @@ const useResponsive = (
 
       const currentWidth = document.body.clientWidth;
 
+      // set global variables
+      global.ROOT_FONT_SIZE = rootFontSize;
+      global.sizeCriteria = criteria;
+
       document.documentElement.style.willChange = "font-size";
       document.documentElement.style.height = "100%";
 
-      if (currentWidth < (criteria?.break || XD_TABLET_WIDTH)) {
+      if (currentWidth <= sizeCriteria.break) {
         document.documentElement.style.fontSize = vwMobile(
-          rootFontSize || ROOT_FONT_SIZE
+          global.ROOT_FONT_SIZE,
+          global.sizeCriteria.break
         );
       } else {
         document.documentElement.style.fontSize = vw(
-          rootFontSize || ROOT_FONT_SIZE
+          global.ROOT_FONT_SIZE,
+          global.sizeCriteria.pc
         );
       }
     }, 200);
-
+    handler();
     window.addEventListener("resize", handler);
 
     return () => {

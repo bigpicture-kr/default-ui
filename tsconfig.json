@@ -20,7 +20,8 @@
     "baseUrl": "./src",
     "paths": {
       "@root/*": ["./*"]
-    }
+    },
+    "typeRoots": ["./node_modules/@types/", "./src/@types/**/*.d.ts"]
   },
   "include": ["src", "index.tsx", "node_modules/*"],
   "exclude": ["node_modules", "build"]
