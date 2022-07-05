@@ -16,8 +16,7 @@
   "module": "./build/index.es.js",
   "types": "./build/types/index.d.ts",
   "scripts": {
-    "build": "tsc --emitDeclarationOnly & rollup -c",
-    "build:example": "yarn clean && tsc --emitDeclarationOnly & rollup -c && cp -r ./build ./examples/react/src/lib",
+    "build": "tsc --emitDeclarationOnly & rollup -cw",
     "clean": "rimraf build && rimraf examples/react/src/lib",
     "start": "npm run exam & npm run watch",
     "build:types": "tsc --emitDeclarationOnly",
@@ -88,5 +87,7 @@
     "react-dom": ">=16.8",
     "react-router-dom": ">=5.2.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "ttypescript": "^1.5.13"
+  }
 }

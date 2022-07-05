@@ -1,31 +1,23 @@
-import {
-  ROOT_FONT_SIZE,
-  XD_DESKTOP_HEIGHT,
-  XD_DESKTOP_WIDTH,
-  XD_MOBILE_WIDTH
-} from "./Variables";
+import { DEFAULT_ROOT_FONT_SIZE } from "./Variables";
 
 export const calculator = (
-  width: number,
-  criteria:
-    | typeof XD_DESKTOP_WIDTH
-    | typeof XD_DESKTOP_HEIGHT
-    | typeof XD_MOBILE_WIDTH,
+  rootFontSize: number,
+  criteria: number,
   unit: string = "vw"
 ) => {
-  const percentage = (width / criteria) * 100;
+  const percentage = (rootFontSize / criteria) * 100;
 
   return percentage + unit;
 };
 
-export const vw = (width: number) => {
-  return calculator(width, XD_DESKTOP_WIDTH);
+export const vw = (rootFontSize: number, pcWidth: number) => {
+  return calculator(rootFontSize, pcWidth);
 };
 
-export const vwMobile = (width: number) => {
-  return calculator(width, XD_MOBILE_WIDTH);
+export const vwMobile = (rootFontSize: number, moWidth: number) => {
+  return calculator(rootFontSize, moWidth);
 };
 
 export const pxToRem = (px: number): string => {
-  return px / ROOT_FONT_SIZE + "rem";
+  return px / (global.ROOT_FONT_SIZE || DEFAULT_ROOT_FONT_SIZE) + "rem";
 };

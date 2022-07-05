@@ -1,8 +1,7 @@
 import {
-  XD_DESKTOP_WIDTH,
-  XD_LAPTOP_WIDTH,
-  XD_MOBILE_WIDTH,
-  XD_TABLET_WIDTH
+  DEFAULT_DESKTOP_HEIGHT,
+  DEFAULT_MOBILE_WIDTH,
+  DEFAULT_TABLET_WIDTH
 } from "@root/constants/Variables";
 
 const customMediaQuery = (maxWidth: number): string =>
@@ -10,8 +9,7 @@ const customMediaQuery = (maxWidth: number): string =>
 
 export const media = {
   custom: customMediaQuery,
-  desktop: customMediaQuery(XD_DESKTOP_WIDTH),
-  laptop: customMediaQuery(XD_LAPTOP_WIDTH),
-  tablet: customMediaQuery(XD_TABLET_WIDTH), // 768
-  mobile: customMediaQuery(XD_MOBILE_WIDTH)
+  desktop: customMediaQuery(DEFAULT_DESKTOP_HEIGHT),
+  tablet: customMediaQuery(global.sizeCriteria.break || DEFAULT_TABLET_WIDTH), // 768
+  mobile: customMediaQuery(global.sizeCriteria.mobile || DEFAULT_MOBILE_WIDTH)
 };
