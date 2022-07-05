@@ -10,6 +10,6 @@ const customMediaQuery = (maxWidth: number): string =>
 export const media = {
   custom: customMediaQuery,
   desktop: customMediaQuery(DEFAULT_DESKTOP_HEIGHT),
-  tablet: customMediaQuery(global.sizeCriteria.break || DEFAULT_TABLET_WIDTH), // 768
-  mobile: customMediaQuery(global.sizeCriteria.mobile || DEFAULT_MOBILE_WIDTH)
+  tablet: customMediaQuery(DEFAULT_TABLET_WIDTH),
+  mobile: customMediaQuery(DEFAULT_MOBILE_WIDTH)
 };
